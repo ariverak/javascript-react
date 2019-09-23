@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sin React</title>
+</head>
+<body>
+    <input id="name" placeholder="nombre" type="text">
+    <button type="button" id="btnSave">Guardar</button>
+    <div id="results">
+
+    </div>
+    <script type="text/javascript">
+        const nameInput = document.getElementById("name");
+        const resultDiv = document.getElementById("results");
+        const btnSave = document.getElementById("btnSave");
+        btnSave.addEventListener('click',function(){
+            const nameContainer = document.createElement('p');
+            nameContainer.innerText = nameInput.value
+            resultDiv.append(nameContainer);
+            nameInput.value = '';
+        })
+    </script>
+</body>
+</html>
